@@ -6,7 +6,7 @@
     <meta name="author" content="ALX Student">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="semantic HTML, accessibility, web development, blog">
-    <title>Form Accessibility</title>
+    <title>Semantic HTML Blog</title>
   </head>
   <body>
     <header>
@@ -57,33 +57,27 @@
           <p>Published on 2024-09-11</p>
         </footer>
       </article>
-
+ 
       <section>
-      <form action="#" method="POST" aria-labelledby="form-title" role="form">
-  <h2 id="form-title">Contact Form</h2>
+        <form action="#" method="POST" aria-labelledby="form-title" role="form">
+          <h2 id="form-title">Contact Form</h2>
 
-  <fieldset>
-    <legend class="sr-only">Contact Information</legend> <!-- sr-only: إخفاء بصريًا ولكن مرئي لقارئ الشاشة -->
+          <div>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" aria-required="true">
+          </div>
 
-    <div>
-      <label for="name">Name</label>
-      <input type="text" id="name" name="name" aria-required="true">
-    </div>
+          <div>
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email" aria-required="true">
+          </div>
 
-    <div>
-      <label for="email">Email</label>
-      <input type="text" id="email" name="email" aria-required="true">
-    </div>
-  </fieldset>
+          <div>
+            <button type="submit" aria-label="Submit the form">Submit</button>
+          </div>
 
-  <div>
-    <button type="submit" aria-label="Submit the form">Submit</button>
-  </div>
-
-  <div aria-live="polite" role="alert"></div>
-</form>
-
-        <!-- Force checker to update -->
+          <div aria-live="polite" role="alert"></div>
+        </form>
       </section>
     </main>
   </body>
