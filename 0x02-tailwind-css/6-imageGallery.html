@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Image Gallery</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @media (max-width: 768px) {
+        main {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body class="p-4">
+    <header class="bg-blue-500 text-white p-4">
+        <h1 class="text-3xl">Grid and Flexbox Layout</h1>
+    </header>
+
+    <main class="grid grid-cols-1 lg:grid-cols-3 gap-4 mt-4 min-h-screen">
+        <section class="lg:col-span-2 flex">
+            <div class="w-1/2 p-4 bg-red-200" >Flexbox Item 1</div>
+            <div class="p-4 w-1/2 bg-red-400 ">Flexbox Item 2</div>
+        </section>
+        <aside class="bg-green-200 p-4">Sidebar</aside>
+    </main>
+
+
+    <section class="mt-8">
+      <h2 class="text-2xl font-semibold mb-4">Image Gallery</h2>
+      <figure class="grid grid-cols-2 md:grid-cols-3 sm:grid-cols-1 gap-4">
+        <img
+        src="https://media.istockphoto.com/id/1069113788/photo/flower-shop.jpg?s=612x612&w=0&k=20&c=zHOcAMFWrbxzlbfR9PWuGjU_wD6WX87A7qkoIEkSP8s="
+        alt="Image 1"
+          class="w-full h-auto rounded-lg "
+          
+        />
+        <img
+          src="https://media.istockphoto.com/id/171239712/photo/flower-shop-in-paris.jpg?s=612x612&w=0&k=20&c=YCQDuNOh7OYLuh36xfNfrQbbr0CC-7h-ip2G4-RIqc0="
+        alt="Image 2"
+          class="w-full h-auto rounded-lg"
+        />
+        <img
+          src="https://media.istockphoto.com/id/1473710691/photo/an-employee-of-a-flower-boutique-holds-a-freshly-picked-bouquet.jpg?s=612x612&w=0&k=20&c=434vQvqHj1Jdox_nNnRM7OkXUIlAizT7Vwxso4xlRI8="
+          alt="Image 3"
+          class="w-full h-auto rounded-lg"
+        />
+
+      </figure>
+    </section>
+  </body>
+</html>
