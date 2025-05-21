@@ -1,0 +1,12 @@
+@mixin global-marg($margin_size){
+    margin-left: $margin_size;
+    margin-right: $margin_size;
+}
+
+body{
+    @include global-marg(10px)
+}
+div{
+    @include global-marg(15px)
+}
+
